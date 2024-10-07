@@ -13,17 +13,12 @@ class NotificationsController < ApplicationController
 
     if @notifications.save
 
-      redis = Redis.new(url: 'redis://localhost:6379/1')
-      
-      redis.set('latest_task_update', { 
-        task_id: notifications_params[:task_id], 
-        description: notifications_params[:description]
-      }.to_json)
+      # redis.set('latest_task_update', { 
+      #   task_id: notifications_params[:task_id], 
+      #   description: notifications_params[:description]
+      # }.to_json)
 
-      redis.publish('task_updates', { 
-        task_id: notifications_params[:task_id], 
-        description: notifications_params[:description]
-      }.to_json)
+      publish_task_on_redis(notifications_params[:task_id], notifications_params[:description],@notifications[:created_at].to_i)
                                     
       render json: @notifications, status: :created
     else
@@ -47,5 +42,16 @@ class NotificationsController < ApplicationController
 
   def notifications_params
     params.permit(:description,:email, :task_id, :user_id, :product_id)
+  end
+
+  def publish_task_on_redis(task_id, description_id, created_at)
+
+    redis = Redis.new(url: 'redis://localhost:6379/1')
+    
+    redis.publish('task_updates', {
+      task_id: task_id, 
+      description: description_id,
+      created_at: created_at
+    }.to_json)
   end
 end
