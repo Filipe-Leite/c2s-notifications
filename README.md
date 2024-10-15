@@ -48,9 +48,9 @@ Rails server #on each terminal session for each repository above
 
 ## 3 - Clone the front-end repository
 
-#### https://github.com/Filipe-Leite/c2s-frontend
+#### `https://github.com/Filipe-Leite/c2s-frontend`
 
-git@github.com:Filipe-Leite/c2s-frontend.git
+`git@github.com:Filipe-Leite/c2s-frontend.git`
 
 ## 4 - Open 3 terminal sessions:
 
