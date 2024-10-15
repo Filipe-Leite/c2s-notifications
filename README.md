@@ -26,7 +26,7 @@ Websocket
 
 ## 1 - To run the project clone the following back-end repositories:
 
-#### https://github.com/Filipe-Leite/c2s-authetication
+#### `https://github.com/Filipe-Leite/c2s-authetication`
 
 git clone git@github.com:Filipe-Leite/c2s-authetication.git
 
