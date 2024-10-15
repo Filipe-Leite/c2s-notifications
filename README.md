@@ -28,17 +28,19 @@ Websocket
 
 #### `https://github.com/Filipe-Leite/c2s-authetication`
 
-git clone git@github.com:Filipe-Leite/c2s-authetication.git
+`git clone git@github.com:Filipe-Leite/c2s-authetication.git`
 
-#### https://github.com/Filipe-Leite/c2s-notifications
+#### `https://github.com/Filipe-Leite/c2s-notifications`
 
-git clone git@github.com:Filipe-Leite/c2s-notifications.git
+`git clone git@github.com:Filipe-Leite/c2s-notifications.git`
 
-#### https://github.com/Filipe-Leite/c2s-tasks
+#### `https://github.com/Filipe-Leite/c2s-tasks`
 
-git clone git@github.com:Filipe-Leite/c2s-tasks.git
+`git clone git@github.com:Filipe-Leite/c2s-tasks.git`
 
-#### https://github.com/Filipe-Leite/c2s-web-scrapping
+#### `https://github.com/Filipe-Leite/c2s-web-scrapping`
+
+`git@github.com:Filipe-Leite/c2s-web-scrapping.git`
 
 ## 2 - After clone the microservices go to each cloned repository (make sure you are using the correct Ruby language and Ruby On Rails versions) and run:
 
