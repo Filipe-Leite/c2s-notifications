@@ -68,7 +68,7 @@ npm run dev
 
 ## 5 - Success!!! Now you can create two or more accounts and login at same time
 
-![Screenshot from 2024-10-15 20-41-14](https://github.com/user-attachments/assets/63628aa7-86ba-4f90-bbaa-9e36443972ff)
+![image](https://github.com/user-attachments/assets/a7aa6bca-6bb0-43ae-9e49-121abe7d0172)
 
 ![image](https://github.com/user-attachments/assets/9092deca-d077-4d89-a1ab-f410ca10483e)
 
