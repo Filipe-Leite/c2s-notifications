@@ -70,7 +70,7 @@ npm run dev
 
 ![image](https://github.com/user-attachments/assets/a7aa6bca-6bb0-43ae-9e49-121abe7d0172)
 
-![image](https://github.com/user-attachments/assets/f3738e35-3331-4a26-97aa-fbe25e86de78)
+![image](https://github.com/user-attachments/assets/b99113be-f98e-43e0-a3eb-8e4659e67452)
 
 ![image](https://github.com/user-attachments/assets/5b4bd605-adcf-4bb0-8d6c-c82ae37d12b7)
 
