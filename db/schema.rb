@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.1].define(version: 2024_08_08_220454) do
+ActiveRecord::Schema[7.1].define(version: 2024_10_13_211004) do
   create_table "notifications", charset: "utf8mb3", force: :cascade do |t|
     t.string "description"
     t.integer "user_id"
@@ -19,6 +19,7 @@ ActiveRecord::Schema[7.1].define(version: 2024_08_08_220454) do
     t.bigint "product_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer "task_status_id"
     t.index ["product_id"], name: "index_notifications_on_product_id"
   end
 

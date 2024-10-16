@@ -4,7 +4,7 @@ class NotificationsController < ApplicationController
 
   def index
     @notifications = Notification.all
-    render json: notifications, status: :ok
+    render json: @notifications, status: :ok
   end
 
   def create_task_notification
@@ -13,16 +13,18 @@ class NotificationsController < ApplicationController
 
     if @notifications.save
 
-      # redis.set('latest_task_update', { 
-      #   task_id: notifications_params[:task_id], 
-      #   description: notifications_params[:description]
-      # }.to_json)
-
-      publish_task_on_redis(notifications_params[:task_id], notifications_params[:description],@notifications[:created_at].to_i)
+      publish_task_on_redis(@notifications[:created_at],
+                            notifications_params[:description],
+                            @notifications[:email],
+                            @notifications[:id],
+                            @notifications[:product_id],
+                            notifications_params[:task_id],
+                            notifications_params[:task_status_id],
+                            @notifications[:updated_at],
+                            notifications_params[:user_id])
                                     
       render json: @notifications, status: :created
     else
-      p "Errors: #{@notifications.errors.full_messages}"
       render json: @notifications.errors, status: :unprocessable_entity
     end
   end
@@ -41,17 +43,24 @@ class NotificationsController < ApplicationController
   private
 
   def notifications_params
-    params.permit(:description,:email, :task_id, :user_id, :product_id)
+    params.permit(:description,:email, :task_id, :user_id, :product_id, :task_status_id)
   end
 
-  def publish_task_on_redis(task_id, description_id, created_at)
+  def publish_task_on_redis(created_at, description, email, id, product_id, 
+                            task_id, task_status_id, updated_at, user_id)
 
     redis = Redis.new(url: 'redis://localhost:6379/1')
     
     redis.publish('task_updates', {
+      created_at: created_at,
+      description: description,
+      email: email,
+      id: id,
+      product_id: product_id,
       task_id: task_id, 
-      description: description_id,
-      created_at: created_at
+      task_status_id: task_status_id,
+      updated_at: updated_at,
+      user_id: user_id,
     }.to_json)
   end
 end
