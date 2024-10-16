@@ -65,3 +65,14 @@ redis-server
 ### 4.3 - Go to c2s-frontend/server directory and run:
 
 npm run dev
+
+## 5 - Success!!! Now you can create two or more accounts and login at same time
+
+![Screenshot from 2024-10-15 20-41-14](https://github.com/user-attachments/assets/63628aa7-86ba-4f90-bbaa-9e36443972ff)
+
+![image](https://github.com/user-attachments/assets/9092deca-d077-4d89-a1ab-f410ca10483e)
+
+![image](https://github.com/user-attachments/assets/5b4bd605-adcf-4bb0-8d6c-c82ae37d12b7)
+
+![image](https://github.com/user-attachments/assets/7c928941-7b4b-4de9-9859-0df74268ba1c)
+
